@@ -39,15 +39,14 @@ execute(createTblQuery).then(result => {
 
 const createPostTblQuery = `
     CREATE TABLE IF NOT EXISTS "posttable" (
-	    "id" SERIAL PRIMARY KEY,         
-	    "title" VARCHAR(200) NOT NULL,
+	    "id" SERIAL PRIMARY KEY,
 	    "body" VARCHAR(200) NOT NULL,
-        "urllink" VARCHAR(200)  
+        "date" VARCHAR(200) NOT NULL
     );`;
 
 execute(createPostTblQuery).then(result => {
     if (result) {
-        console.log('If does not exists, create the "posttable" table');
+        console.log('Table "posttable" is created');
     }
 });    
 
